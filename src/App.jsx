@@ -5,6 +5,7 @@ import AboutPage from "./components/AboutPage";
 import FaqComponent from "./components/FaqComponent";
 import Testimonials from "./components/Testimonials";
 import Introduction from "./components/Introduction";
+import Footer from "../src/components/Footer";
 import MarqueeHeader from "./components/MarqueeHeader";
 import ProductGallery from "./components/ProductGallery";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
         </Routes>
       </main>
+      <Footer />
       <WhatsAppButton />
     </Router>
   );
