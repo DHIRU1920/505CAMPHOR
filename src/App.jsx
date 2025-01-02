@@ -4,7 +4,7 @@ import ContactForm from "./components/ContactForm";
 import AboutPage from "./components/AboutPage";
 import FaqComponent from "./components/FaqComponent";
 import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
+import Footer from "../src/components/Footer";
 import Introduction from "./components/Introduction";
 import MarqueeHeader from "./components/MarqueeHeader";
 import ProductGallery from "./components/ProductGallery";
