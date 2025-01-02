@@ -1,0 +1,157 @@
+.slider-comp-container {
+  position: relative;
+  width: 100%;
+  height: 7in;
+  background-color: #111;
+}
+
+/* Loading styles */
+.slider-comp-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  z-index: 50;
+}
+
+.slider-comp-loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #333;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: slider-comp-spin 1s linear infinite;
+}
+
+@keyframes slider-comp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slides styles */
+.slider-comp-slides-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-comp-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+  opacity: 0;
+}
+
+.slider-comp-slide.slider-comp-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider-comp-slide.slider-comp-prev {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slider-comp-slide.slider-comp-next {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slider-comp-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-comp-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+/* Navigation buttons */
+.slider-comp-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.slider-comp-container:hover .slider-comp-nav-button {
+  opacity: 1;
+}
+
+.slider-comp-nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.slider-comp-prev-button {
+  left: 16px;
+}
+
+.slider-comp-next-button {
+  right: 16px;
+}
+
+/* Controls container */
+.slider-comp-controls-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* Play/Pause button */
+.slider-comp-play-pause-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-comp-play-pause-button:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Progress indicators */
+.slider-comp-progress-indicators {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.slider-comp-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-comp-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.slider-comp-indicator.slider-comp-active-indicator {
+  width: 16px;
+  background-color: white;
+}

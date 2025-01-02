@@ -1,0 +1,134 @@
+/* Testimonials Section - Fullwidth Background */
+.testimonials-section {
+  background: linear-gradient(145deg, #e8ebda, #f1f6e4); /* Softer orange shade */
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  box-sizing: border-box;
+}
+
+/* Card Structure for Testimonials */
+.testimonials-container {
+  max-width: 675px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 37.5px 30px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background patterns inside the card */
+.testimonials-container::before,
+.testimonials-container::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 247, 237, 0.4); /* Softer decorative circle */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.testimonials-container::before {
+  top: -37.5px;
+  left: -37.5px;
+}
+
+.testimonials-container::after {
+  bottom: -37.5px;
+  right: -37.5px;
+}
+
+/* Inner content positioning */
+.testimonials-container * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title Styling */
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #E69A78; /* Softer orange tone for the heading */
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Quote Styling */
+.testimonial-slider {
+  min-height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.testimonial-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+  font-style: italic;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.testimonial-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.testimonial-content span {
+  display: block;
+  font-weight: bold;
+  color: #111;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+/* Pagination Dots */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+  background-color: #E69A78; /* Softer orange tone for active dot */
+}
+
+.pagination-dot:hover {
+  background-color: #E69A78;
+}
+
+/* Card Hover Effect */
+.testimonials-container:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
