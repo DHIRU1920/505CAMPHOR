@@ -4,8 +4,12 @@ import ContactForm from "./components/ContactForm";
 import AboutPage from "./components/AboutPage";
 import FaqComponent from "./components/FaqComponent";
 import Testimonials from "./components/Testimonials";
+<<<<<<< HEAD
 import Footer from "../src/components/Footer";
+=======
+>>>>>>> 4d6f19a7c295ca29b94aae830df57fca016dd30f
 import Introduction from "./components/Introduction";
+import Footer from "../src/components/Footer";
 import MarqueeHeader from "./components/MarqueeHeader";
 import ProductGallery from "./components/ProductGallery";
 import WhatsAppButton from "./components/WhatsAppButton";
