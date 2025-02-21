@@ -1,51 +1,18 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import styles from './ContactForm.module.css';
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const ContactForm = () => {
-  // Function to send email using EmailJS
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_vxmiclc',  // Replace with your EmailJS Service ID
-        'template_hd2axx8', // Replace with your EmailJS Template ID
-        e.target,           // The form element
-        'wfzuteBQ1ALlpu7Qu'   // Replace with your EmailJS Public Key
-      )
-      .then(
-        (result) => {
-          console.log('Email successfully sent:', result.text);
-          alert('Message sent successfully!');
-        },
-        (error) => {
-          console.error('Failed to send email:', error.text);
-          alert('Failed to send message. Please try again.');
-        }
-      );
-
-    e.target.reset(); // Clear the form after submission
-  };
-
-  // Google Maps initialization
   useEffect(() => {
-    const initialize = () => {
-      const mapOptions = {
-        center: new window.google.maps.LatLng(16.847280739069337, 74.57063111468786),
-        zoom: 18,
-        mapTypeId: window.google.maps.MapTypeId.HYBRID,
-        scrollwheel: false,
-        draggable: false,
-        panControl: true,
-        zoomControl: true,
-        mapTypeControl: true,
-        scaleControl: true,
-        streetViewControl: true,
-        overviewMapControl: true,
-        rotateControl: true,
-      };
-      const map = new window.google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    const loadGoogleMaps = () => {
+      if (!window.google) return;
+
+      const map = new window.google.maps.Map(document.getElementById('map'), {
+        center: { lat: 16.847280739069337, lng: 74.57063111468786 },
+        zoom: 15,
+      });
 
       new window.google.maps.Marker({
         position: { lat: 16.847280739069337, lng: 74.57063111468786 },
@@ -54,50 +21,69 @@ const ContactForm = () => {
       });
     };
 
-    const loadScript = () => {
+    if (window.google) {
+      loadGoogleMaps();
+    } else {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?AIzaSyCu1np9drC6gd2p8JfqUHDmrHiKFesI6wU`; // Replace with your Google Maps API key
+      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap`;
       script.async = true;
       script.defer = true;
-      script.onload = initialize;
-      document.head.appendChild(script);
-    };
-
-    loadScript();
+      script.onload = () => loadGoogleMaps();
+      document.body.appendChild(script);
+    }
   }, []);
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      'service_vxmiclc',
+      'template_hd2axx8',
+      e.target,
+      'wfzuteBQ1ALlpu7Qu'
+    ).then(
+      (result) => {
+        alert('Message sent successfully!');
+      },
+      (error) => {
+        alert('Failed to send message. Please try again.');
+      }
+    );
+    e.target.reset();
+  };
+
   return (
-    <div className={styles.contact} id="contact">
-      <h2 className={styles.title}>Get in Touch</h2>
-
-      <div className={styles.contactContainer}>
-        <div className={styles.mergedSections}>
-          <div className={styles.location}>
-            <h3>📍 Our Location</h3>
-            <p>Shop No 1, 100 Futi</p>
-            <p>Sangli, Sangli Miraj Kupwad, Maharashtra 416416</p>
-            <p>Phone: +91 9225820501</p>
-          </div>
-
-          <div className={styles.contactInfo}>
-            <h3>📞 Contact Information</h3>
-            <p><strong>Mobile:</strong> +1 (555) 123-4567</p>
-            <p><strong>Email:</strong> contact@example.com</p>
-          </div>
+    <div className={styles.contactContainer}>
+      <h2 className={styles.title}>Keep in Touch</h2>
+      <div className={styles.gridContainer}>
+        {/* Left Side - Contact Form */}
+        <div className={styles.formSection}>
+          <form className={styles.contactForm} onSubmit={sendEmail}>
+            <input type="text" name="sender_name" placeholder="Name" required />
+            <div className={styles.inputRow}>
+              <input type="email" name="sender_email" placeholder="Email" required />
+              <input type="text" name="sender_mobile" placeholder="Mobile" required />
+            </div>
+            <textarea name="sender_message" placeholder="Message" required></textarea>
+            <button type="submit" className={styles.sendButton}>Send</button><br></br>
+          </form>
         </div>
-
-        <form className={styles.contactForm} onSubmit={sendEmail}>
-          <h4>📧 Send us a Message</h4>
-          <input type="text" name="sender_name" placeholder="Your Name" required />
-          <input type="email" name="sender_email" placeholder="Your Email" required />
-          <textarea name="sender_message" placeholder="Your Message" required></textarea>
-          <button type="submit">Submit</button>
-        </form>
+        
+        {/* Right Side - Address Section */}
+        <div className={styles.addressSection}>
+          <h3 className={styles.addressTitle}>Address</h3>
+          <div className={styles.addressItem}><FaMapMarkerAlt /> Shop No 1 100 Futi Sangli, Sangli Miraj Kupwad, Maharashtra 416416</div>
+          <div className={styles.addressItem}><FaEnvelope /> 505camphor@gmail.com</div>
+          <div className={styles.addressItem}><FaPhoneAlt />  9511007700</div>
+          <div className={styles.addressItem}><FaPhoneAlt />  9874563210</div>
+        </div>
       </div>
-
-      <div id="map-canvas" className={styles.map}></div>
+      
+      {/* Google Map */}
+      <div className={styles.mapContainer}>
+        <div id="map" className={styles.map}></div>
+      </div>
     </div>
   );
 };
 
-export default ContactForm; // Ensure this is here
+export default ContactForm;

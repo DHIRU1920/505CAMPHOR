@@ -1,0 +1,49 @@
+/* StatsCounter.module.css */
+
+/* Base styles for all screen sizes */
+
+/* Custom hover effect for stats boxes */
+.statsBox {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statsBox:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom styles for the heading */
+.customHeading {
+  font-weight: 700;
+  color: #ffffff; /* White color */
+  font-size: 2rem; /* Default font size for mobile */
+}
+
+/* Custom styles for the paragraph */
+.customParagraph {
+  font-weight: 400;
+  color: #fff7ed; /* Light orange color */
+  font-size: 1rem; /* Default font size for mobile */
+}
+
+/* Responsive styles for tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  .customHeading {
+    font-size: 2.5rem; /* Larger font size for tablets */
+  }
+
+  .customParagraph {
+    font-size: 1.25rem; /* Larger font size for tablets */
+  }
+}
+
+/* Responsive styles for PCs (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .customHeading {
+    font-size: 3rem; /* Larger font size for PCs */
+  }
+
+  .customParagraph {
+    font-size: 1.5rem; /* Larger font size for PCs */
+  }
+}

@@ -1,10 +1,21 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect, useRef } from 'react';
-import img1 from "../assets/img1.png";
-import img2 from "../assets/img2.png";
-import img3 from "../assets/img3.png";
-import img4 from "../assets/img4.png";
-import img5 from "../assets/img5.png";
+import Bhimesemi_100gm from "../assets/1 Bhimesemi 100gm.png";
+import bhimeseni_50_gm  from "../assets/bhimeseni_50_gm.png";
+import Regular_100_gm_pouch from "../assets/Regular_100_gm_pouch.png";
+import Regular_10_gm from "../assets/Regular_10_gm.png";
+import regular_130_tablets from "../assets/regular_130_tablets.png";
+import Regular_200_gm_and_250_gm_pouch from "../assets/Regular_200_gm_and_250_gm_pouch.png";
+import Regular_20_gm_ from "../assets/Regular_20_gm_.png";
+import Regular_20_tablets from "../assets/Regular_20_tablets.png";
+import Regular_40gm_and_50_gm from "../assets/Regular_40gm_and_50_gm.png";
+import Regular_5_gm from "../assets/Regular_5_gm.png";
+import Regular_60_tablets from "../assets/Regular_60_tablets.png";
+import Regular_60_tablets_1 from "../assets/Regular_60_tablets_1.png";
+import regular_dabbi_15_gm from "../assets/regular_dabbi_15_gm.png";
+import regular_dabbi_5_gm from "../assets/regular_dabbi_5_gm.png";
+
+
 import './ProductSlider.module.css';
 
 const ProductSlider = () => {
@@ -26,28 +37,73 @@ const ProductSlider = () => {
 
   const slides = [
     { 
-      image: img1,
-      title: "Pure Camphor Blocks", 
+      image: Bhimesemi_100gm,
+      title: "Bhimesemi_100gm", 
       description: "99.9% pure pharmaceutical grade camphor"
     },
     { 
-      image: img2,
-      title: "Modern Production Unit", 
+      image: bhimeseni_50_gm,
+      title: "bhimeseni_50_gm", 
       description: "State-of-the-art manufacturing facility"
     },
     { 
-      image: img3,
-      title: "Quality Testing Lab", 
+      image: Regular_100_gm_pouch,
+      title: "Regular_100_gm_pouch", 
       description: "Advanced quality control measures"
     },
     { 
-      image: img4,
-      title: "Premium Packaging", 
+      image: regular_130_tablets,
+      title: "regular_130_tablets", 
       description: "Airtight and moisture-resistant packaging"
     },
     { 
-      image: img5,
-      title: "Raw Materials", 
+      image: Regular_10_gm,
+      title: "Regular_10_gm", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_200_gm_and_250_gm_pouch,
+      title: "Regular_200_gm_and_250_gm_pouch", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_20_gm_,
+      title: "Regular_20_gm_", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_20_tablets,
+      title: "Regular_20_tablets", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_40gm_and_50_gm,
+      title: "Regular_40gm_and_50_gm", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_5_gm,
+      title: "Regular_5_gm", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_60_tablets,
+      title: "Regular_60_tablets", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: Regular_60_tablets_1,
+      title: "Regular_60_tablets_1", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: regular_dabbi_15_gm,
+      title: "regular_dabbi_15_gm", 
+      description: "Sourced from premium suppliers"
+    },
+    { 
+      image: regular_dabbi_5_gm,
+      title: "regular_dabbi_5_gm", 
       description: "Sourced from premium suppliers"
     }
   ];

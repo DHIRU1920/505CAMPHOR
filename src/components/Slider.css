@@ -1,7 +1,7 @@
 .slider-comp-container {
   position: relative;
   width: 100%;
-  height: 7in;
+  height: 6in;
   background-color: #111;
 }
 
@@ -62,10 +62,15 @@
   transform: translateX(100%);
 }
 
+.slider-comp-slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .slider-comp-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .slider-comp-slide-overlay {

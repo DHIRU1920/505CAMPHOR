@@ -1,167 +1,116 @@
-/* General Container */
-.contact {
-  padding: 40px 20px;
-  font-family: 'Roboto', sans-serif;
-  background-color: #FFF7ED;  /* Softer pastel background */
+.contactContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #E69A78;  /* Softer orange tone */
-  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid red;
+  display: inline-block;
 }
 
-.contactContainer {
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  max-width: 900px;
-  margin: 0 auto;
+.formAndAddress {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Section Styling */
-.location, .contactInfo {
-  width: 48%;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-  color: #E69A78;  /* Softer orange tone */
-}
-
-p {
-  font-size: 1rem;
-  margin: 5px 0;
-  color: #333;
-}
-
-/* Business Hours */
-.businessHours {
-  margin-top: 20px;
-  background-color: #F3EDEB;  /* Softened background */
-  padding: 15px;
+.formContainer {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.businessHours h4 {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #E69A78;  /* Softer orange tone */
-}
-
-/* Contact Form */
 .contactForm {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.contactForm input,
+.contactForm textarea {
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.contactForm h4 {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #E69A78;  /* Softer orange tone */
+.inputRow {
+  display: flex;
+  gap: 10px;
 }
 
-input, textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+.inputRow input {
+  flex: 1;
 }
 
-textarea {
-  height: 120px; /* Increased height for textarea */
-}
-
-button {
-  padding: 10px;
-  background-color: #E69A78;  /* Softer orange tone */
+.sendButton {
+  background-color: #f44336;
   color: white;
+  padding: 12px;
   border: none;
   border-radius: 5px;
+  font-size: 20px;
   cursor: pointer;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendButton:hover {
+  background-color: #d32f2f;
+}
+
+/* Address Section */
+.addressContainer {
+  flex: 0.8;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.addressTitle {
+  font-size: 22px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  border-bottom: 2px solid red;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-button:hover {
-  background-color: #D97F6A;  /* Slightly darker on hover */
+.addressItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
-/* Map Container */
-.map {
+.icon {
+  color: #f44336;
+  font-size: 18px;
+}
+
+/* Google Map */
+.mapContainer {
   width: 100%;
-  height: 500px; /* Increased height for map */
+  height: 300px;
   margin-top: 20px;
 }
 
-/* Footer */
-.footer {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.footer p {
-  margin: 10px 0;
-}
-
-.socialLinks span {
-  margin-right: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #E69A78;  /* Softer orange tone */
-}
-
-/* Merged Card Layout */
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-}
-
-.mergedSections {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.mergedSections .location, .mergedSections .contactInfo {
-  width: 48%;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .location, .contactInfo {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contactForm {
-    margin-top: 20px;
-  }
-
-  .mergedSections {
-    flex-direction: column;
-  }
-
-  .contactContainer {
-    padding: 20px;
-  }
-
-  /* Adjust the height for smaller screens */
-  .map {
-    height: 300px; /* Decrease height for smaller screens */
-  }
+.map {
+  width: 100%;  
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }

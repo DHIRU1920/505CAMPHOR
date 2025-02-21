@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for reusable elements -->
+  <defs>
+    <!-- Gradient for overall background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8f0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#fff4e6;stop-opacity:1"/>
+    </linearGradient>
+    
+    <!-- Camphor crystal pattern -->
+    <pattern id="crystalPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M10 50 L50 10 L90 50 L50 90 Z" fill="none" stroke="#f97316" stroke-width="0.5" opacity="0.1"/>
+      <circle cx="50" cy="50" r="5" fill="#f97316" opacity="0.05"/>
+    </pattern>
+    
+    <!-- Leaf symbol for reuse -->
+    <symbol id="camphorLeaf" viewBox="0 0 100 100">
+      <path d="M20,50 Q50,0 80,50 Q50,100 20,50" fill="#f97316" opacity="0.1"/>
+      <path d="M35,50 Q50,20 65,50 Q50,80 35,50" fill="#f97316" opacity="0.15"/>
+    </symbol>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  
+  <!-- Crystal pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#crystalPattern)"/>
+  
+  <!-- Decorative camphor leaves scattered around -->
+  <use href="#camphorLeaf" x="100" y="100" width="100" height="100"/>
+  <use href="#camphorLeaf" x="900" y="200" width="120" height="120" transform="rotate(45, 960, 260)"/>
+  <use href="#camphorLeaf" x="200" y="600" width="80" height="80" transform="rotate(-30, 240, 640)"/>
+  <use href="#camphorLeaf" x="1000" y="600" width="90" height="90" transform="rotate(15, 1045, 645)"/>
+  
+  <!-- Molecular structure suggestion (hexagonal patterns) -->
+  <g opacity="0.07" stroke="#f97316" stroke-width="1" fill="none">
+    <path d="M700,100 L750,130 L750,190 L700,220 L650,190 L650,130 Z"/>
+    <path d="M600,300 L650,330 L650,390 L600,420 L550,390 L550,330 Z"/>
+    <path d="M800,300 L850,330 L850,390 L800,420 L750,390 L750,330 Z"/>
+  </g>
+  
+  <!-- Abstract wave patterns suggesting natural essence -->
+  <path d="M0,600 Q300,550 600,600 T1200,600" fill="#f97316" opacity="0.04"/>
+  <path d="M0,650 Q300,600 600,650 T1200,650" fill="#f97316" opacity="0.03"/>
+  
+  <!-- Subtle dots pattern -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="2" fill="#f97316"/>
+    <circle cx="300" cy="200" r="2" fill="#f97316"/>
+    <circle cx="500" cy="300" r="2" fill="#f97316"/>
+    <circle cx="700" cy="150" r="2" fill="#f97316"/>
+    <circle cx="900" cy="250" r="2" fill="#f97316"/>
+    <circle cx="1100" cy="350" r="2" fill="#f97316"/>
+  </g>
+</svg>

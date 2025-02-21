@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
-import img1 from '../assets/img1.png';
-import img2 from '../assets/img2.png';
-import img3 from '../assets/img3.png';
-import img4 from '../assets/img4.png';
-import img5 from '../assets/IMG_11.jpg';
+import img1 from '../assets/Slider_IMG1.png';
+import img2 from '../assets/Slider_IMG2.png';
+import img3 from '../assets/Slider_IMG3.png';
+import img4 from '../assets/Slider_IMG1.png';
+import img5 from '../assets/Slider_IMG2.png';
 import './Slider.css';
 
 const images = [img1, img2, img3, img4, img5];

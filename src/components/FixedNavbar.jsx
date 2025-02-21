@@ -50,7 +50,7 @@ function FixedNavbar() {
             <Link to="/contact" onClick={closeMenu}>Contact</Link>
           </li>
           <li>
-            <Link to="/testimonials" onClick={closeMenu}>Testimonials</Link>
+            <Link to="/blog" onClick={closeMenu}>blog</Link>
           </li>
         </ul>
         <button

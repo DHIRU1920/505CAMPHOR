@@ -1,42 +1,44 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FixedNavbar from "./components/FixedNavbar";
-import ContactForm from "./components/ContactForm";
-import AboutPage from "./components/AboutPage";
-import FaqComponent from "./components/FaqComponent";
-import Testimonials from "./components/Testimonials";
-<<<<<<< HEAD
-import Footer from "../src/components/Footer";
-=======
->>>>>>> 4d6f19a7c295ca29b94aae830df57fca016dd30f
-import Introduction from "./components/Introduction";
-import Footer from "../src/components/Footer";
-import MarqueeHeader from "./components/MarqueeHeader";
-import ProductGallery from "./components/ProductGallery";
-import WhatsAppButton from "./components/WhatsAppButton";
-import BreadcrumbHeader from "./components/BreadcrumbHeader";
-import CamphorBenefits from "./components/CamphorBenefits";
+  import { lazy, Suspense } from "react";
+  import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+  import FixedNavbar from "./components/FixedNavbar";
+  import Footer from "./components/GlobalFooter";
+  import WhatsAppButton from "./components/WhatsAppButton";
+  import MarqueeHeader from "./components/MarqueeHeader";
+  import LoadingSpinner from "./components/LoadingSpinner";
 
+  // Lazy load components
+  const Introduction = lazy(() => import("./components/Introduction"));
+  const AboutPage = lazy(() => import("./components/AboutPage"));
+  const FaqComponent = lazy(() => import("./components/FaqComponent"));
+  const ProductGallery = lazy(() => import("./components/ProductGallery"));
+  const ProductSection = lazy(() => import("./components/ProductSection"));
+  const ContactForm = lazy(() => import("./components/ContactForm"));
+  const BlogList = lazy(() => import("./components/BlogList"));
+  const BlogPost = lazy(() => import("./components/BlogPost"));
 
-function App() {
-  return (
-    <Router>
-      <MarqueeHeader />
-      <FixedNavbar />
-      <BreadcrumbHeader />
-      <main>
-        <Routes>
-          <Route path="/" element={<Introduction />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/faq" element={<FaqComponent />} />
-          <Route path="/product-gallery" element={<ProductGallery />} />
-          <Route path="/contact" element={<ContactForm />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-        </Routes>
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </Router>
-  );
-}
+  function App() { 
+    return (
+      <Router>
+        <MarqueeHeader />
+        <FixedNavbar />
+        <main>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Introduction />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/faq" element={<FaqComponent />} />
+              <Route path="/product-gallery" element={<ProductGallery />} />
+              <Route path="/product/:id" element={<ProductSection />} />
+              <Route path="/contact" element={<ContactForm />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:postId" element={<BlogPost />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </Router>
+    );
+  }
 
-export default App;
+  export default App;
