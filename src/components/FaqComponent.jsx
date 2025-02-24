@@ -76,45 +76,120 @@ const FaqComponent = ({ categories = defaultCategories }) => {
 
 const defaultCategories = [
   {
-    category: "Company",
+    category: "About 505 Camphor",
     items: [
-      { 
-        question: "Is 505Camphor an Indian company?",
-        answer: "Yes, 505Camphor is based in India, specializing in high-quality camphor products."
+      {
+        question: "What is 505 Camphor?",
+        answer: "505 Camphor is a premium-quality camphor widely used for religious rituals, meditation, and aromatherapy. It is known for its pure, natural fragrance and symbolic importance in spiritual practices like Buddhism and Hinduism."
       },
       {
-        question: "What does 505Camphor stand for?",
-        answer: "505Camphor represents purity, tradition, and innovation in camphor-based solutions."
+        question: "What makes 505 Camphor different from regular camphor?",
+        answer: "505 Camphor stands out for its superior purity, long-lasting aroma, and eco-friendly manufacturing process. It is free from harmful chemicals, making it ideal for spiritual and daily use."
       },
       {
-        question: "Can I get samples or discounts?",
-        answer: "We offer samples and occasional discounts. Contact us for more details."
+        question: "Does 505 Camphor come with a certification of purity?",
+        answer: "Yes, 505 Camphor is certified for its quality and purity, ensuring you receive a product that meets the highest standards for spiritual and personal use."
       }
     ]
   },
   {
-    category: "Nutritional & Dietary",
+    category: "Benefits and Uses",
     items: [
       {
-        question: "Is camphor safe for consumption?",
-        answer: "Only edible-grade camphor is safe for limited use in food preparations. Always check the label."
+        question: "What are the benefits of using 505 Camphor?",
+        answer: "505 Camphor offers multiple benefits, including purifying the air with its antimicrobial properties, enhancing meditation and spiritual focus, acting as a natural insect repellent, and promoting relaxation and reducing stress with its calming aroma."
       },
       {
-        question: "Are 505Camphor products organic?",
-        answer: "We offer both natural and synthetic camphor products, ensuring the highest quality and purity."
+        question: "Can 505 Camphor be used for aromatherapy?",
+        answer: "Yes, 505 Camphor is perfect for aromatherapy. Its natural fragrance promotes relaxation, clears the mind, and creates a calming ambiance."
+      },
+      {
+        question: "Does 505 Camphor help in air purification?",
+        answer: "Yes, 505 Camphor has natural antimicrobial properties that purify the air, eliminating bacteria, germs, and unpleasant odors."
+      },
+      {
+        question: "Can I use 505 Camphor as an insect repellent?",
+        answer: "Yes, 505 Camphor acts as a natural insect repellent. Place it in corners of your home or cupboards to keep mosquitoes and other pests away."
+      },
+      {
+        question: "What are the health benefits of 505 Camphor?",
+        answer: "505 Camphor helps in relieving stress and anxiety, acting as a natural decongestant for cold and cough, and purifying the air and eliminating bacteria."
       }
     ]
   },
   {
-    category: "Products",
+    category: "Spiritual and Cultural Significance",
     items: [
       {
-        question: "How to use camphor for aromatherapy?",
-        answer: "Camphor can be used in diffusers or essential oil blends to promote relaxation and purification."
+        question: "How is 505 Camphor used in Buddhism?",
+        answer: "In Buddhism, 505 Camphor symbolizes purity and enlightenment. It is used during meditation, prayer, and rituals to create a serene environment and uplift spiritual energy."
       },
       {
-        question: "What is the shelf life of camphor?",
-        answer: "Camphor typically lasts 3-5 years if stored in a cool, dry place away from direct sunlight."
+        question: "What are the spiritual uses of 505 Camphor?",
+        answer: "505 Camphor is used for lighting lamps during prayers, meditation, and ceremonies. It is believed to ward off negative energy and attract positive vibrations in spiritual spaces."
+      },
+      {
+        question: "What are the cultural significances of 505 Camphor?",
+        answer: "505 Camphor holds cultural importance in rituals, festivals, and prayers in Hinduism and Buddhism. It represents purity, devotion, and the dispelling of darkness."
+      },
+      {
+        question: "Why is camphor burning important in spiritual practices?",
+        answer: "Burning camphor is believed to dispel negativity, purify the environment, and connect devotees to divine energy. It acts as a bridge between the physical and spiritual realms."
+      }
+    ]
+  },
+  {
+    category: "Safety and Storage",
+    items: [
+      {
+        question: "Is 505 Camphor safe to use?",
+        answer: "Yes, 505 Camphor is made from high-quality natural ingredients and is safe for use in religious ceremonies, aromatherapy, and daily pujas. Always follow the instructions for safe handling."
+      },
+      {
+        question: "Does 505 Camphor contain any harmful chemicals?",
+        answer: "No, 505 Camphor is 100% natural and free from harmful chemicals, ensuring safety for spiritual and household use."
+      },
+      {
+        question: "How should 505 Camphor be stored?",
+        answer: "Store 505 Camphor in a cool, dry place away from direct sunlight and moisture. Ensure it is kept in an airtight container to retain its aroma and effectiveness."
+      }
+    ]
+  },
+  {
+    category: "Purchasing and Availability",
+    items: [
+      {
+        question: "Where can I buy 505 Camphor?",
+        answer: "You can purchase authentic 505 Camphor on our website or from trusted online marketplaces like Amazon, Flipkart, and other authorized retailers."
+      },
+      {
+        question: "What are the packaging options available for 505 Camphor?",
+        answer: "505 Camphor is available in multiple packaging options, including small, medium, and bulk packs, catering to individual and commercial needs."
+      }
+    ]
+  },
+  {
+    category: "Camphor in Sangli, Maharashtra, India",
+    items: [
+      {
+        question: "What is the significance of using camphor in worship?",
+        answer: "Camphor symbolizes purity and the transformation of ego into devotion. During worship, burning camphor represents the removal of negative energies and the elevation of spiritual focus, making it an essential element in Hindu and Buddhist rituals."
+      },
+      {
+        question: "Why is 505 Camphor considered the best for worship in Sangli?",
+        answer: "505 Camphor is renowned for its high purity, long-lasting fragrance, and chemical-free composition. Its superior quality ensures a smoke-free and clean burn, ideal for spiritual practices in homes and temples in Sangli, Maharashtra."
+      },
+      {
+        question: "Where can I buy 505 Camphor in Sangli, Maharashtra?",
+        answer: "You can purchase 505 Camphor at local stores in Sangli or order it online from trusted retailers such as Amazon, Flipkart, or the official 505 Camphor website."
+      },
+      {
+        question: "Can 505 Camphor be used for temple rituals in Sangli?",
+        answer: "Yes, 505 Camphor is widely used in temples across Sangli due to its purity and symbolic significance. It is perfect for aarti, havan, and other religious ceremonies."
+      },
+      {
+        question: "How should I store 505 Camphor in Sangli’s humid climate?",
+        answer: "To preserve its quality, store 505 Camphor in an airtight container in a cool, dry place. Avoid exposing it to direct sunlight or moisture."
       }
     ]
   }

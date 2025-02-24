@@ -1,28 +1,41 @@
 /* StatsCounter.module.css */
 
-/* Base styles for all screen sizes */
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
 
 /* Custom hover effect for stats boxes */
 .statsBox {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9; /* Light background for stats boxes */
+  border: 1px solid #dddddd; /* Soft border for subtle definition */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1.5rem; /* Add some padding */
+  text-align: center;
+  min-width: 200px;
 }
 
 .statsBox:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
 }
 
 /* Custom styles for the heading */
 .customHeading {
   font-weight: 700;
-  color: #ffffff; /* White color */
+  color: #333333; /* Darker color for readability */
   font-size: 2rem; /* Default font size for mobile */
 }
 
 /* Custom styles for the paragraph */
 .customParagraph {
   font-weight: 400;
-  color: #fff7ed; /* Light orange color */
+  color: #555555; /* Medium gray for better readability */
   font-size: 1rem; /* Default font size for mobile */
 }
 

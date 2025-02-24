@@ -1,14 +1,12 @@
-import { useLocation, Link, useParams } from "react-router-dom";
-import products from "./products";
+import { useLocation, Link } from "react-router-dom";
 import "./Breadcrumb.css";
 
 const BreadcrumbHeader = () => {
   const location = useLocation();
-  const { id } = useParams();
 
-  if (location.pathname === "/") return null;
+  if (location.pathname === "/" || location.pathname.startsWith("/product/")) return null;
 
-  const routes = {
+  const routeNames = {
     about: "About",
     "product-gallery": "Product Gallery",
     faq: "FAQ",
@@ -16,32 +14,30 @@ const BreadcrumbHeader = () => {
     testimonials: "Testimonials",
   };
 
-  let pathSegments = location.pathname.split("/").filter(Boolean);
-  let breadcrumbItems = [];
-  let path = "";
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const breadcrumbItems = [];
+  let accumulatedPath = "";
 
   pathSegments.forEach((segment) => {
-    if (segment === id) {
-      path = `/product-gallery/${id}`;
-      breadcrumbItems.push({ path: "/product-gallery", displayName: "Product Gallery" });
+    accumulatedPath += `/${segment}`;
 
-      const product = products.find((p) => p.id === parseInt(id, 10));
-      breadcrumbItems.push({ path, displayName: product ? product.name : "Product" });
-
-      return;
-    }
-
-    path += `/${segment}`;
-    breadcrumbItems.push({ path, displayName: routes[segment] || segment.replace(/-/g, " ").toUpperCase() });
+    breadcrumbItems.push({
+      path: accumulatedPath,
+      displayName: routeNames[segment] || segment.replace(/-/g, " "),
+    });
   });
 
   return (
     <div className="breadcrumb-container">
       <div className="breadcrumb-content">
-        <h1 className="breadcrumb-title">{breadcrumbItems.at(-1)?.displayName || "HOME"}</h1>
+        <h1 className="breadcrumb-title">
+          {breadcrumbItems.length > 0 ? breadcrumbItems.at(-1).displayName : "HOME"}
+        </h1>
         <div className="breadcrumb-path-container">
           <p className="breadcrumb-path">
-            <Link to="/" className="breadcrumb-home">Home</Link>
+            <Link to="/" className="breadcrumb-home">
+              Home
+            </Link>
             {breadcrumbItems.map((item, index) => (
               <span key={item.path}>
                 {" / "}

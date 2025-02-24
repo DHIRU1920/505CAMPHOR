@@ -1,0 +1,52 @@
+.marquee-header {
+    position: fixed;
+    top: 0; /* At the very top */
+    left: 0;
+    width: 100%;
+    background-color: #fff3e0; /* Light orange background */
+    border-bottom: 1px solid #ffe0b2; /* Light orange border */
+    z-index: 1000; /* Same z-index as FixedNavbar */
+    overflow: hidden;
+  }
+  
+  .marquee-container {
+    display: flex;
+    align-items: center;
+    height: 40px; /* Adjust height as needed */
+  }
+  
+  .marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee-item {
+    margin: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #bf360c; /* Dark orange text */
+    transition: color 0.3s ease;
+  }
+  
+  .marquee-item:hover {
+    color: #e65100; /* Darker orange on hover */
+  }
+  
+  .marquee-symbol {
+    color: #ff9800; /* Orange symbol */
+  }
+  
+  .marquee-separator {
+    margin: 0 8px;
+    color: #ffcc80; /* Light orange separator */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
