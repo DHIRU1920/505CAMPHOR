@@ -163,7 +163,7 @@
 
 @media (max-width: 480px) {
   .slider-comp-container {
-    height: 200px; /* Further adjust height for smaller devices */
+    height: 300px; /* Further adjust height for smaller devices */
   }
 
   .slider-comp-nav-button {
