@@ -51,7 +51,7 @@ const Introduction = () => {
             </div>
 
             {/* Right Section - Image */}
-            <div className={`relative bg-gradient-to-br from-yellow-50/80 to-orange-50/80 p-6 sm:p-8 lg:p-12 flex items-center justify-center transition-all duration-1000 ease-in-out backdrop-blur-sm ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+            <div className={`relative bg-gradient-to-br from-orange-100/80 to-orange-200/80 p-6 sm:p-8 lg:p-12 flex items-center justify-center transition-all duration-1000 ease-in-out backdrop-blur-sm ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
               <div className="relative group w-full max-w-md">
                 <img 
                   src={Bhimesemi_100gm} 

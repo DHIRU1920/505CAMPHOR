@@ -19,7 +19,7 @@ const FaqComponent = ({ categories = defaultCategories }) => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
+    <div className="w-full max-w-6xl mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
       {/* Add Helmet to manage the document head */}
       <Helmet>
         <title>Frequently Asked Questions - 505 Camphor</title>

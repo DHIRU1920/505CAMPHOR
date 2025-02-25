@@ -11,7 +11,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #EA580C;
   display: inline-block;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .sendButton {
-  background-color: #f44336;
+  background-color: #EA580C;
   color: white;
   padding: 12px;
   border: none;
@@ -67,7 +67,7 @@
 }
 
 .sendButton:hover {
-  background-color: #d32f2f;
+  background-color: #ff782f;
 }
 
 /* Address Section */
@@ -82,7 +82,7 @@
 .addressTitle {
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #EA580C;
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 15px;

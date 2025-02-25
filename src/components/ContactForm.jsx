@@ -75,7 +75,7 @@ const ContactForm = () => {
 
       {/* Contact Form Content */}
       <div className={styles.contactContainer}>
-        <h2 className={styles.title}>Keep in Touch</h2>
+        <h2 className={styles.title}>CONTACT US</h2>
         <div className={styles.gridContainer}>
           {/* Left Side - Contact Form */}
           <div className={styles.formSection}>

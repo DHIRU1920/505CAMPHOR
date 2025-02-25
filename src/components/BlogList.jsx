@@ -21,15 +21,15 @@ const BlogList = () => {
     {
       id: "best-camphor-brand-in-india",
       title: "505 Camphor: Best Camphor Brand in India",
-      excerpt:
-        "505 Camphor, a name synonymous with purity and tradition...",
+      excerpt: "505 Camphor, a name synonymous with purity and tradition...",
       date: "Sep 20, 2023",
       author: "Admin",
       image: img2,
     },
     {
       id: "505-camphor-bridging-tradition-and-innovation",
-      title: "505 Camphor: Bridging Tradition and Innovation for Health and Healing",
+      title:
+        "505 Camphor: Bridging Tradition and Innovation for Health and Healing",
       excerpt:
         "505 Camphor is a white, crystalline substance derived from the wood...",
       date: "Sep 23, 2023",
@@ -38,7 +38,8 @@ const BlogList = () => {
     },
     {
       id: "505-camphor-eco-friendly-insect-repellent",
-      title: "505 Camphor: An Eco-Friendly Insect Repellent for a Healthier Planet",
+      title:
+        "505 Camphor: An Eco-Friendly Insect Repellent for a Healthier Planet",
       excerpt:
         "As environmental awareness continues to grow, so does the demand...",
       date: "Sep 25, 2023",
@@ -47,25 +48,26 @@ const BlogList = () => {
     },
     {
       id: "505-camphor-natural-preservative",
-      title: "505 Camphor: The Extraordinary Function of 505 Camphor as a Natural Preservative",
-      excerpt:
-        "505 Camphor is a crystalline substance that exudes a strong...",
+      title:
+        "505 Camphor: The Extraordinary Function of 505 Camphor as a Natural Preservative",
+      excerpt: "505 Camphor is a crystalline substance that exudes a strong...",
       date: "Sep 26, 2023",
       author: "Admin",
       image: img1,
     },
     {
       id: "505-camphor-meditation-benefits",
-      title: "The Healing Benefits of 505 Camphor in Meditation: An In-Depth Overview",
-      excerpt:
-        "Meditation is a practice deeply rooted in various cultures...",
+      title:
+        "The Healing Benefits of 505 Camphor in Meditation: An In-Depth Overview",
+      excerpt: "Meditation is a practice deeply rooted in various cultures...",
       date: "Sep 27, 2023",
       author: "Admin",
       image: img2,
     },
     {
       id: "505-camphor-premium-quality",
-      title: "Unveil the Wonders of 505 Camphor: The Purest and Most Premium Quality Camphor",
+      title:
+        "Unveil the Wonders of 505 Camphor: The Purest and Most Premium Quality Camphor",
       excerpt:
         "505 Camphor, a natural chemical substance with a distinctive fragrance...",
       date: "Sep 28, 2023",
@@ -92,15 +94,21 @@ const BlogList = () => {
           property="og:description"
           content="Discover the latest insights about 505 Camphor, its benefits, and its role in enhancing spiritual and wellness practices."
         />
-        <meta property="og:image" content="https://www.505camphor.com/images/blog-banner.jpg" />
+        <meta
+          property="og:image"
+          content="https://www.505camphor.com/images/blog-banner.jpg"
+        />
         <link rel="canonical" href="https://www.505camphor.com/blog" />
       </Helmet>
 
-      <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Blog</h1>
+      <main className="max-w-6xl mx-auto px-4 py-8 space-y-6">
+        {" "}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <div key={post.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div
+              key={post.id}
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <img
                 src={post.image}
                 alt={post.title}

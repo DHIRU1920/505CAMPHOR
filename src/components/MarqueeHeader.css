@@ -3,7 +3,7 @@
     top: 0; /* At the very top */
     left: 0;
     width: 100%;
-    background-color: #fff3e0; /* Light orange background */
+    background-color: #fcdcac; /* Light orange background */
     border-bottom: 1px solid #ffe0b2; /* Light orange border */
     z-index: 1000; /* Same z-index as FixedNavbar */
     overflow: hidden;

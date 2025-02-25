@@ -1,6 +1,6 @@
 .breadcrumb-container {
   width: 100%;
-  background: linear-gradient(135deg, #e2c4a5, #5D7A66);
+  background: linear-gradient(135deg, #e2c4a5, #ffbb55fd);
   padding: 3.5rem 0;
   box-shadow: 0 8px 16px rgba(170, 177, 146, 0.15);
   border-radius: 12px;
@@ -57,7 +57,7 @@
 }
 
 .breadcrumb-home {
-  color: #B8C9BD;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;

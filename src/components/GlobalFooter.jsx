@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram } from 'react-icons/fa';
 import './GlobalFooter.css'; // Updated CSS
 import { useEffect } from 'react';
 
@@ -7,11 +7,11 @@ const GlobalFooter = () => {
   useEffect(() => {
     const loadGoogleMaps = () => {
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?https://maps.googleapis.com/maps/api/js?AIzaSyCu1np9drC6gd2p8JfqUHDmrHiKFesI6wU&callback=initMap`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCu1np9drC6gd2p8JfqUHDmrHiKFesI6wU&callback=initMap`;
       script.async = true;
       script.defer = true;
       document.body.appendChild(script);
-      
+
       window.initMap = () => {
         const map = new window.google.maps.Map(document.getElementById("map"), {
           center: { lat: 16.847280739069337, lng: 74.57063111468786 },
@@ -74,9 +74,22 @@ const GlobalFooter = () => {
       {/* Footer Bottom */}
       <div className="mt-8 text-center text-sm bg-gray-700 py-4">
         <div className="flex justify-center space-x-4 mb-2">
-          <a href="#" className="text-blue-500 hover:text-blue-700 text-2xl"><FaFacebook /></a>
-          <a href="#" className="text-pink-500 hover:text-pink-700 text-2xl"><FaInstagram /></a>
-          <a href="#" className="text-blue-500 hover:text-blue-700 text-2xl"><FaLinkedin /></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61557605817734"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-blue-700 text-2xl"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.instagram.com/505.finecamphor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-500 hover:text-pink-700 text-2xl"
+          >
+            <FaInstagram />
+          </a>
         </div>
         <p className="text-white">© 2025 505Camphor. Developed by TrioXperts.</p>
       </div>

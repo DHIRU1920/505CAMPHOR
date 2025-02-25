@@ -112,9 +112,9 @@ const ProductSlider = () => {
     <div className={styles.sliderOuterContainer}>
       <div className={styles.container}>
         {/* Attractive Heading */}
-        <div className={styles.header}>
-          <h2>Our Products</h2>
-        </div>
+        <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600">
+          Our Products
+        </h2>
 
         {/* Slider Container */}
         <div className={styles.sliderContainer}>
