@@ -43,11 +43,11 @@ const GlobalFooter = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-300">Featured Links</h3>
           <ul className="space-y-2">
-            <li><Link to="/" className="hover:underline text-gray-300"><span className="text-red-500">›</span> Home</Link></li>
-            <li><Link to="/about" className="hover:underline text-gray-300"><span className="text-red-500">›</span> About Us</Link></li>
-            <li><Link to="/product-gallery" className="hover:underline text-gray-300"><span className="text-red-500">›</span> Our Products</Link></li>
-            <li><Link to="/faq" className="hover:underline text-gray-300"><span className="text-red-500">›</span> FAQ</Link></li>
-            <li><Link to="/contact" className="hover:underline text-gray-300"><span className="text-red-500">›</span> Contact</Link></li>
+            <li><Link to="/" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> Home</Link></li>
+            <li><Link to="/about" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> About Us</Link></li>
+            <li><Link to="/product-gallery" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> Our Products</Link></li>
+            <li><Link to="/faq" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> FAQ</Link></li>
+            <li><Link to="/contact" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> Contact</Link></li>
           </ul>
         </div>
 
@@ -62,8 +62,8 @@ const GlobalFooter = () => {
         {/* Get Connect */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-300">Get Connect</h3>
-          <p className="mb-3 text-white"><FaPhoneAlt className="text-red-500 inline-block mr-2" /> 9511007700</p>
-          <p className="mb-3 text-white"><FaPhoneAlt className="text-red-500 inline-block mr-2" /> 9874563210</p>
+          <p className="mb-3 text-white"><FaPhoneAlt className="text-orange-500 inline-block mr-2" /> 9511007700</p>
+          <p className="mb-3 text-white"><FaPhoneAlt className="text-orange-500 inline-block mr-2" /> 9874563210</p>
           <p>
             <FaEnvelope className="text-gray-300 inline-block mr-2" />
             <a href="505camphor.com" className="text-gray-300 hover:underline">505camphor.com</a>
