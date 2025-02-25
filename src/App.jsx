@@ -5,6 +5,7 @@ import Footer from "./components/GlobalFooter";
 import WhatsAppButton from "./components/WhatsAppButton";
 import MarqueeHeader from "./components/MarqueeHeader";
 import LoadingSpinner from "./components/LoadingSpinner";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Lazy load components
 const Introduction = lazy(() => import("./components/Introduction"));
@@ -23,8 +24,8 @@ function App() {
       <MarqueeHeader />
       <FixedNavbar />
       <main>
+        <ScrollToTop></ScrollToTop>
         <Suspense fallback={<LoadingSpinner />}>
-          {/* Place BreadcrumbHeader here, just below the navbar and above the main content */}
           <BreadcrumbHeader />
           <Routes>
             <Route path="/" element={<Introduction />} />
