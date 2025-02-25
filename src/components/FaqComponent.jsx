@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { Helmet } from 'react-helmet'; // Import Helmet
 import { ChevronDown } from 'lucide-react';
 
 const FaqComponent = ({ categories = defaultCategories }) => {
@@ -19,24 +20,37 @@ const FaqComponent = ({ categories = defaultCategories }) => {
 
   return (
     <div className="w-full max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
+      {/* Add Helmet to manage the document head */}
+      <Helmet>
+        <title>Frequently Asked Questions - 505 Camphor</title>
+        <meta
+          name="description"
+          content="Explore frequently asked questions about 505 Camphor, its benefits, uses, spiritual significance, and more. Find answers to all your queries here."
+        />
+        <meta
+          name="keywords"
+          content="505 Camphor, FAQ, benefits of camphor, spiritual uses of camphor, camphor for worship, buy camphor"
+        />
+      </Helmet>
+
       <h1 className="text-3xl font-bold text-center mb-8">
         Frequently Asked Questions
       </h1>
-      
+
       <div className="space-y-6">
         {categories.map((category, categoryIndex) => (
           <div key={`category-${categoryIndex}`} className="space-y-4">
             <h2 className="text-2xl font-semibold text-gray-800">
               {category.category}
             </h2>
-            
+
             <div className="space-y-3">
               {category.items.map((item, itemIndex) => {
                 const itemId = `${categoryIndex}-${itemIndex}`;
                 const isOpen = openItems.has(itemId);
-                
+
                 return (
-                  <div key={itemId} 
+                  <div key={itemId}
                     className="border border-gray-200 rounded-lg bg-white overflow-hidden">
                     <button
                       onClick={() => toggleFaq(itemId)}
@@ -47,13 +61,13 @@ const FaqComponent = ({ categories = defaultCategories }) => {
                       <span className="font-medium text-gray-900">
                         {item.question}
                       </span>
-                      <ChevronDown 
+                      <ChevronDown
                         className={`h-5 w-5 text-gray-500 transition-transform duration-200 ${
                           isOpen ? 'transform rotate-180' : ''
                         }`}
                       />
                     </button>
-                    
+
                     {isOpen && (
                       <div
                         id={`faq-answer-${itemId}`}
@@ -73,6 +87,7 @@ const FaqComponent = ({ categories = defaultCategories }) => {
     </div>
   );
 };
+
 
 const defaultCategories = [
   {

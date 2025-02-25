@@ -1,4 +1,5 @@
 import { useParams, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet"; // Import Helmet
 import products from "./products"; // Import product data
 import "./ProductSection.css";
 import { useNavigate } from "react-router-dom"; // For navigation
@@ -29,6 +30,27 @@ const ProductSection = () => {
 
   return (
     <div className="product-section">
+      {/* Add Helmet for SEO and document head management */}
+      <Helmet>
+        <title>{product.name} - 505 Camphor</title>
+        <meta
+          name="description"
+          content={`Discover ${product.name}, a premium camphor product from 505 Camphor. ${product.description}`}
+        />
+        <meta
+          name="keywords"
+          content={`505 Camphor, ${product.name}, ${product.category}, camphor for worship, buy camphor`}
+        />
+        {/* Open Graph tags for social sharing */}
+        <meta property="og:title" content={`${product.name} - 505 Camphor`} />
+        <meta
+          property="og:description"
+          content={`Discover ${product.name}, a premium camphor product from 505 Camphor. ${product.description}`}
+        />
+        <meta property="og:image" content={product.image} />
+        <meta property="og:url" content={`https://yourwebsite.com/product/${product.id}`} />
+      </Helmet>
+
       <div className="product-container">
         {/* Product Details */}
         <div className="product-details">
@@ -42,7 +64,7 @@ const ProductSection = () => {
             <div className="info-item">
               <strong className="info-label"></strong>
               <span className="info-value">
-              {product.info || "No additional information available."}
+                {product.info || "No additional information available."}
               </span>
             </div>
 

@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet"; // Import React Helmet
 import img4 from '../assets/Slider_IMG4.png';
 import img5 from '../assets/Slider_IMG5.png';
 import img2 from '../assets/Slider_IMG2.png';
 import img1 from '../assets/Slider_IMG1.png';
+
 const BlogPost = () => {
   const { postId } = useParams();
 
@@ -440,7 +442,6 @@ const BlogPost = () => {
         </>
       ),
     }, 
-        
   };
 
   const post = posts[postId];
@@ -450,150 +451,172 @@ const BlogPost = () => {
   }
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-gray-800">
-        {post.title}
-      </h1>
-
-      {/* Hero Section */}
-      <section className="bg-white shadow-md rounded-lg overflow-hidden">
-        <img
-          src={post.image}
-          alt="505 Camphor"
-          className="w-full h-60 md:h-80 object-cover"
+    <>
+      {/* Page-Specific SEO with React Helmet */}
+      <Helmet>
+        <title>{post.title} - 505 Camphor</title>
+        <meta
+          name="description"
+          content={`${post.excerpt || post.content.props.children} Learn more about 505 Camphor and its benefits.`}
         />
-        <div className="p-6">
-          <p className="text-gray-500 text-sm mb-4">
-            {post.date} by {post.author}
-          </p>
-          <div className="text-gray-700 leading-relaxed">
-            {post.content}
+        <meta
+          name="keywords"
+          content={`505 Camphor, ${post.title}, camphor benefits, camphor uses, camphor for worship, camphor for meditation`}
+        />
+        <meta property="og:title" content={`${post.title} - 505 Camphor`} />
+        <meta
+          property="og:description"
+          content={`${post.excerpt || post.content.props.children} Discover the benefits of 505 Camphor.`}
+        />
+        <meta property="og:image" content={post.image} />
+        <link rel="canonical" href={`https://www.505camphor.com/blog/${postId}`} />
+      </Helmet>
+
+      <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+        <h1 className="text-2xl md:text-4xl font-bold text-center text-gray-800">
+          {post.title}
+        </h1>
+
+        {/* Hero Section */}
+        <section className="bg-white shadow-md rounded-lg overflow-hidden">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-60 md:h-80 object-cover"
+          />
+          <div className="p-6">
+            <p className="text-gray-500 text-sm mb-4">
+              {post.date} by {post.author}
+            </p>
+            <div className="text-gray-700 leading-relaxed">
+              {post.content}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Unique Features Section (if applicable) */}
-      {post.uniqueFeatures && (
-        <section className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Our Unique Features
-          </h3>
-          <ul className="list-disc ml-6 space-y-2">
-            {post.uniqueFeatures.map((feature, index) => (
-              <li key={index} className="text-gray-700">
-                {feature}
-              </li>
-            ))}
-          </ul>
         </section>
-      )}
 
-      {/* Importance Section */}
-      {post.importance && (
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Importance of Camphor in Indian Culture and Rituals
-          </h3>
-          <p className="text-gray-700 leading-relaxed">{post.importance}</p>
-          {post.keyPoints && (
-            <ul className="list-disc ml-6 space-y-2 mt-4">
-              {post.keyPoints.map((point, index) => (
+        {/* Unique Features Section (if applicable) */}
+        {post.uniqueFeatures && (
+          <section className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Our Unique Features
+            </h3>
+            <ul className="list-disc ml-6 space-y-2">
+              {post.uniqueFeatures.map((feature, index) => (
                 <li key={index} className="text-gray-700">
-                  {point}
+                  {feature}
                 </li>
               ))}
             </ul>
-          )}
-        </section>
-      )}
+          </section>
+        )}
 
-      {/* Purpose Section (if applicable) */}
-      {post.purpose && (
-        <section className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Purpose of This Blog
-          </h3>
-          <p className="text-gray-700 leading-relaxed">{post.purpose}</p>
-          {post.purposePoints && (
-            <ul className="list-disc ml-6 space-y-2 mt-4">
-              {post.purposePoints.map((point, index) => (
-                <li key={index} className="text-gray-700">
-                  {point}
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
-      )}
-
-      {/* What Makes a Camphor Brand the Best? (if applicable) */}
-      {post.whatMakesBest && (
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            What Makes a Camphor Brand the Best?
-          </h3>
-          {post.whatMakesBest.map((item, index) => (
-            <div key={index} className="mb-6">
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                {item.title}
-              </h4>
-              <ul className="list-disc ml-6 space-y-2">
-                {item.points.map((point, idx) => (
-                  <li key={idx} className="text-gray-700">
+        {/* Importance Section */}
+        {post.importance && (
+          <section className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Importance of Camphor in Indian Culture and Rituals
+            </h3>
+            <p className="text-gray-700 leading-relaxed">{post.importance}</p>
+            {post.keyPoints && (
+              <ul className="list-disc ml-6 space-y-2 mt-4">
+                {post.keyPoints.map((point, index) => (
+                  <li key={index} className="text-gray-700">
                     {point}
                   </li>
                 ))}
               </ul>
-            </div>
-          ))}
-        </section>
-      )}
+            )}
+          </section>
+        )}
 
-      {/* Why Choose 505 Camphor? (if applicable) */}
-      {post.whyChoose && (
-        <section className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Why Choose 505 Camphor PVT. LTD.?
-          </h3>
-          <ul className="list-disc ml-6 space-y-2">
-            {post.whyChoose.map((reason, index) => (
-              <li key={index} className="text-gray-700">
-                {reason}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+        {/* Purpose Section (if applicable) */}
+        {post.purpose && (
+          <section className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Purpose of This Blog
+            </h3>
+            <p className="text-gray-700 leading-relaxed">{post.purpose}</p>
+            {post.purposePoints && (
+              <ul className="list-disc ml-6 space-y-2 mt-4">
+                {post.purposePoints.map((point, index) => (
+                  <li key={index} className="text-gray-700">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
 
-      {/* Testimonials Section (if applicable) */}
-      {post.testimonials && (
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Customer Testimonials
-          </h3>
-          <div className="space-y-4">
-            {post.testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
-                <p className="text-gray-600 font-semibold mt-2">
-                  – {testimonial.author}
-                </p>
+        {/* What Makes a Camphor Brand the Best? (if applicable) */}
+        {post.whatMakesBest && (
+          <section className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              What Makes a Camphor Brand the Best?
+            </h3>
+            {post.whatMakesBest.map((item, index) => (
+              <div key={index} className="mb-6">
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  {item.title}
+                </h4>
+                <ul className="list-disc ml-6 space-y-2">
+                  {item.points.map((point, idx) => (
+                    <li key={idx} className="text-gray-700">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
-      {/* Call to Action Section (if applicable) */}
-      {post.callToAction && (
-        <section className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Explore 505 Camphor
-          </h3>
-          <p className="text-gray-700 leading-relaxed">{post.callToAction}</p>
-        </section>
-      )}
-    </main>
+        {/* Why Choose 505 Camphor? (if applicable) */}
+        {post.whyChoose && (
+          <section className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Why Choose 505 Camphor PVT. LTD.?
+            </h3>
+            <ul className="list-disc ml-6 space-y-2">
+              {post.whyChoose.map((reason, index) => (
+                <li key={index} className="text-gray-700">
+                  {reason}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Testimonials Section (if applicable) */}
+        {post.testimonials && (
+          <section className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Customer Testimonials
+            </h3>
+            <div className="space-y-4">
+              {post.testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                  <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 font-semibold mt-2">
+                    – {testimonial.author}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Call to Action Section (if applicable) */}
+        {post.callToAction && (
+          <section className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+              Explore 505 Camphor
+            </h3>
+            <p className="text-gray-700 leading-relaxed">{post.callToAction}</p>
+          </section>
+        )}
+      </main>
+    </>
   );
 };
 
