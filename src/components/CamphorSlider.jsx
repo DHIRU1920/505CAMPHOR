@@ -53,10 +53,10 @@ const CamphorSlider = () => {
   const duplicatedSlides = [...slides, ...slides, ...slides];
 
   return (
-    <div className="slider-outer-container bg-gradient-to-b from-gray-50 to-white">
+    <div className="slider-outer-container bg-gradient-to-b from-gray-50 to-white py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">Our Products</h2>
+        <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Products</h2>
         </div>
 
         <div className="slider-container overflow-hidden relative bg-white shadow-lg rounded-lg">
