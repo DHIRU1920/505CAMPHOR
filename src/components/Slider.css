@@ -160,3 +160,32 @@
   width: 16px;
   background-color: white;
 }
+
+@media (max-width: 480px) {
+  .slider-comp-container {
+    height: 200px; /* Further adjust height for smaller devices */
+  }
+
+  .slider-comp-nav-button {
+    padding: 4px; /* Even smaller buttons */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .slider-comp-controls-container {
+    padding: 4px; /* Minimal padding */
+  }
+
+  .slider-comp-play-pause-button {
+    padding: 4px; /* Smaller play/pause button */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .slider-comp-indicator {
+    width: 4px; /* Tiny indicators */
+    height: 4px;
+  }
+
+  .slider-comp-indicator.slider-comp-active-indicator {
+    width: 8px; /* Adjust active indicator size */
+  }
+}
