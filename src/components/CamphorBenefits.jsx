@@ -52,7 +52,7 @@ const CamphorBenefits = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#faf6f2] to-white py-8 md:py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-[#faf6f2] to-white py-8 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-8 md:mb-16">
