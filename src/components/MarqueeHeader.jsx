@@ -6,8 +6,8 @@ function MarqueeHeader() {
     { symbol: '🌿', text: 'International Trading Co.' },
     { symbol: '❄️', text: 'Premium Camphor Manufacturers' },
     { symbol: '✨', text: 'Pure & Natural Camphor Products' },
-    { symbol: '🌱', text: 'Quality Since 1995' },
-    { symbol: '💫', text: 'Worldwide Export Available' }
+    { symbol: '🌱', text: 'Quality Since 1960' },
+    { symbol: '💫', text: 'Best In Sangli' }
   ];
 
   return (

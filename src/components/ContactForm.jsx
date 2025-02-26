@@ -101,10 +101,10 @@ const ContactForm = () => {
               <FaEnvelope /> 505camphor@gmail.com
             </div>
             <div className={styles.addressItem}>
-              <FaPhoneAlt /> 9511007700
+              <FaPhoneAlt /> 9225820501
             </div>
             <div className={styles.addressItem}>
-              <FaPhoneAlt /> 9874563210
+              <FaPhoneAlt /> 9975643505
             </div>
           </div>
         </div>
