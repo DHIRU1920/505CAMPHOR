@@ -48,6 +48,7 @@ const GlobalFooter = () => {
             <li><Link to="/product-gallery" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> Our Products</Link></li>
             <li><Link to="/faq" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> FAQ</Link></li>
             <li><Link to="/contact" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> Contact</Link></li>
+            <li><Link to="/blog" className="hover:underline text-gray-300"><span className="text-orange-500">›</span> Blog</Link></li>
           </ul>
         </div>
 
