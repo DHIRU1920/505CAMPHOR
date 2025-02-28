@@ -62,17 +62,17 @@ const GlobalFooter = () => {
         {/* Get Connect */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-300">Get Connect</h3>
-          <p className="mb-3 text-white"><FaPhoneAlt className="text-orange-500 inline-block mr-2" /> 9511007700</p>
-          <p className="mb-3 text-white"><FaPhoneAlt className="text-orange-500 inline-block mr-2" /> 9874563210</p>
+          <p className="mb-3 text-white"><FaPhoneAlt className="text-orange-500 inline-block mr-2" /> 9225820501</p>
+          <p className="mb-3 text-white"><FaPhoneAlt className="text-orange-500 inline-block mr-2" /> 9975643505</p>
           <p>
             <FaEnvelope className="text-gray-300 inline-block mr-2" />
-            <a href="505camphor.com" className="text-gray-300 hover:underline">505camphor.com</a>
+            <a href="505camphor.com" className="text-gray-300 hover:underline">505camphor@gmail.com</a>
           </p>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-8 text-center text-sm bg-gray-700 py-4">
+      <div className="mt-8 text-center text-sm bg-gray-700 py-4"> 
         <div className="flex justify-center space-x-4 mb-2">
           <a
             href="https://www.facebook.com/profile.php?id=61557605817734"

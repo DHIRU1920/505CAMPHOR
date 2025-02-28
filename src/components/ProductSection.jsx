@@ -82,7 +82,7 @@ const ProductSection = () => {
 
             {/* Read More Button */}
             <button className="read-more-btn" onClick={handleReadMore}>
-              Read More
+              Enquire Now
             </button>
           </div>
 
