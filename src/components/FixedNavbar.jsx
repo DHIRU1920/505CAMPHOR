@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import { Helmet } from 'react-helmet'; // Import Helmet
 import styles from './FixedNavbar.module.css';
-import logo from '../assets/505-logo.png';
+import logo from '../assets/505-logo.png'; // Import the logo
 
 function FixedNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +66,7 @@ function FixedNavbar() {
 
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <img src={logo} alt="505 Company Logo" />
+          <img src={logo} alt="505 Company Logo" /> {/* Use the imported logo */}
         </div>
         <ul className={`${styles.navMenu} ${isMenuOpen ? styles.open : ''}`}>
           <li>
