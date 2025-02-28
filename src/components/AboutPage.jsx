@@ -54,7 +54,7 @@ const AboutPage = () => {
 
       {/* Our People Section */}
       <div className="about-our-people">
-        <h2>Our People</h2>
+        <h2>Executive Profile</h2>
         <img src={pfp} alt="Profile Picture of Founder & CEO" />
         <p>
           <strong>A B C</strong>
