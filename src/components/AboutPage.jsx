@@ -2,7 +2,7 @@
 import { Helmet } from "react-helmet";
 import "./AboutPage.css";
 import aboutUsImage from "../assets/505_Aboutus_2.jpg.png";
-import missionIcon from "../assets/Mission.png";
+import missionIcon from "../assets/mission.png";
 import visionIcon from "../assets/Vision.png";
 import strengthIcon from "../assets/Strength.png";
 
