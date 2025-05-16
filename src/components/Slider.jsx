@@ -1,13 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
-import img1 from '../assets/Slider_IMG1.png';
-import img2 from '../assets/Slider_IMG2.png';
-import img3 from '../assets/Slider_IMG3.png';
-import img4 from '../assets/Slider_IMG1.png';
-import img5 from '../assets/Slider_IMG2.png';
+import img1 from '../assets/Slider_IMG7.jpg';
+import img2 from '../assets/Slider_IMG8.jpg';
+import img3 from '../assets/Slider_IMG9.jpg'; 
 import './Slider.css';
 
-const images = [img1, img2, img3, img4, img5];
+const images = [img1, img2, img3];
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

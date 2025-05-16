@@ -30,8 +30,8 @@ const StatsCounter = () => {
     <div className="flex justify-center items-center bg-gradient-to-br from-[#ffff]  py-8 md:py-16">
       <div className="w-full max-w-7xl p-4 md:p-8 bg-white/30 backdrop-blur-md text-[#ea580c] rounded-lg shadow-lg border border-white/40">
         <div className="text-center mb-6 md:mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#5a5552] mb-2 md:mb-4">OUR ACHIVEMENTS</h1>
-          <p className="text-[#ea580c]/80 text-base md:text-lg">Proudly showcasing our milestones and success</p>
+          <h1 className="text-[2.3rem] md:text-4xl font-bold text-[#FF3C00] mb-2 md:mb-4">OUR ACHIVEMENTS</h1>
+          <p className="text-[#000]/80 text-base md:text-lg">Proudly showcasing our milestones and success</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 text-center">
           {/* Stats */}

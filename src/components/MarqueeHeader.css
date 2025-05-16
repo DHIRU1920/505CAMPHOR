@@ -3,7 +3,7 @@
     top: 0; /* At the very top */
     left: 0;
     width: 100%;
-    background-color: #fcdcac; /* Light orange background */
+    background-color: #9b2002; /* Light orange background */
     border-bottom: 1px solid #ffe0b2; /* Light orange border */
     z-index: 1000; /* Same z-index as FixedNavbar */
     overflow: hidden;
@@ -25,12 +25,12 @@
     margin: 0 16px;
     font-size: 14px;
     font-weight: 500;
-    color: #bf360c; /* Dark orange text */
+    color: white; /* Dark orange text */
     transition: color 0.3s ease;
   }
   
   .marquee-item:hover {
-    color: #e65100; /* Darker orange on hover */
+    color: white; /* Darker orange on hover */
   }
   
   .marquee-symbol {

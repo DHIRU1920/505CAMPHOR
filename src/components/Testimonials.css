@@ -1,6 +1,5 @@
 /* Main container styling */
 .testimonials-container {
-  background: linear-gradient(to bottom right, #fff7ed, #fee2cc); /* Light orange gradient */
   padding: 40px 20px; /* Increased padding for better spacing */
   overflow: hidden; /* Hide overflow for the slider */
   position: relative; /* For positioning arrows */
@@ -8,7 +7,7 @@
 
 /* Heading styling */
 .testimonials-heading {
-  font-size: 2rem; /* 32px */
+  font-size: 2.3rem; /* 32px */
   font-weight: bold;
   text-align: center;
   color: #ea580c; /* Theme color for heading */

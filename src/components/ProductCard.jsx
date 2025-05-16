@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
           onError={(e) => (e.target.src = "/assets/default.png")} // Fallback image
         />
         <h3>{product.name}</h3>
-        <div className="weight">{product.weight}g</div>
+        <div className="weight">{product.weight}</div>
       </Link>
     </div>
   );
@@ -25,7 +25,7 @@ ProductCard.propTypes = {
     id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    weight: PropTypes.number.isRequired,
+    weight: PropTypes.string.isRequired,
   }).isRequired,
 };
 

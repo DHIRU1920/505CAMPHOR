@@ -56,14 +56,14 @@ const CamphorBenefits = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-[#fcd9a5] via-[#ffedd5] to-[#ffd28e] py-8 md:py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-[#FEE7E6]/40  to-[#C85000]/40 py-8 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-[#000] font-light uppercase tracking-widest mb-2 md:mb-3 text-sm md:text-base">
             Pure & Natural
           </h2>
-          <h1 className="text-3xl md:text-5xl font-bold text-[#5a5552] mb-4 md:mb-6">
+          <h1 className="text-[2.3rem] md:text-5xl font-bold text-[#FF3C00] mb-4 md:mb-6">
             Premium Camphor Solutions
           </h1>
           <p className="text-sm md:text-lg text-[#ea580c]/80 max-w-2xl mx-auto">

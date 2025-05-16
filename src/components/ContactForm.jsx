@@ -95,7 +95,7 @@ const ContactForm = () => {
           <div className={styles.addressSection}>
             <h3 className={styles.addressTitle}>Address</h3>
             <div className={styles.addressItem}>
-              <FaMapMarkerAlt /> Shop No 1 100 Futi Sangli, Sangli Miraj Kupwad, Maharashtra 416416
+              <FaMapMarkerAlt /> Shop No 1 100 feet Sangli, Sangli Miraj Kupwad, Maharashtra 416416
             </div>
             <div className={styles.addressItem}>
               <FaEnvelope /> 505camphor@gmail.com

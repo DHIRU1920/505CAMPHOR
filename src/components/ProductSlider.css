@@ -1,0 +1,249 @@
+.sliderOuterContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 3rem 0; /* Increased padding */
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 2000px; /* Increased from 1800px */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased padding */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem; /* Increased margin */
+}
+
+.header h2 {
+  color: #FF3C00;
+  font-size: 2.8rem; /* Increased from 2.3rem */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 35px; /* Increased from 25px */
+  width: max-content;
+  animation: scroll 35s linear infinite; /* Slowed animation slightly */
+}
+
+.sliderTrack.paused {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 14)); /* Adjusted for wider slides */
+  }
+}
+
+@keyframes scrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 14)); /* Adjusted for wider slides on mobile */
+  }
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 350px; /* Increased from 275px */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slideInner {
+  background: white;
+  border-radius: 16px; /* Increased from 12px */
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.slideImage {
+  width: 100%;
+  height: 450px; /* Significantly increased height */
+  object-fit: contain;
+  padding: 15px; /* Reduced padding dramatically */
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.slideContent {
+  padding: 25px; /* Increased from 20px */
+  background: #f5f5f5;
+  flex-grow: 1;
+}
+
+.slideContent h3 {
+  margin: 0 0 15px 0; /* Increased from 12px */
+  font-size: 1.5rem; /* Increased from 1.3rem */
+  color: #222;
+  font-weight: 600;
+}
+
+.slideContent p {
+  margin: 0;
+  font-size: 1.1rem; /* Increased from 1rem */
+  color: #666;
+  line-height: 1.5; /* Increased from 1.4 */
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 95%; /* Increased from 90% */
+  max-height: 95%; /* Increased from 90% */
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 90vh; /* Increased from 85vh */
+  object-fit: contain;
+  border-radius: 10px; /* Increased from 8px */
+}
+
+.closeButton {
+  position: absolute;
+  top: -60px; /* Adjusted for larger modal */
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem; /* Increased from 2.5rem */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .slide {
+    width: 300px; /* Increased from 240px */
+  }
+  
+  .slideImage {
+    height: 400px; /* Further increased height */
+    padding: 12px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 992px) {
+  .header h2 {
+    font-size: 2.5rem; /* Increased from 2.2rem */
+  }
+  
+  .slide {
+    width: 280px; /* Increased from 220px */
+  }
+  
+  .slideImage {
+    height: 370px; /* Further increased height */
+    padding: 10px; /* Further reduced padding */
+  }
+  
+  .sliderTrack {
+    gap: 25px; /* Increased from 20px */
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderTrack {
+    animation: scrollMobile 40s linear infinite; /* Slowed down slightly */
+  }
+  
+  .header h2 {
+    font-size: 2.3rem; /* Increased from 2rem */
+  }
+  
+  .slide {
+    width: 250px; /* Increased from 200px */
+  }
+  
+  .slideImage {
+    height: 340px; /* Further increased height */
+    padding: 8px; /* Further reduced padding */
+  }
+  
+  .slideContent {
+    padding: 20px; /* Increased from 15px */
+  }
+  
+  .slideContent h3 {
+    font-size: 1.3rem; /* Increased from 1.2rem */
+  }
+}
+
+@media (max-width: 576px) {
+  .header h2 {
+    font-size: 2rem; /* Increased from 1.8rem */
+  }
+  
+  .slide {
+    width: 220px; /* Increased from 180px */
+  }
+  
+  .slideImage {
+    height: 300px; /* Further increased height */
+    padding: 6px; /* Minimal padding */
+  }
+  
+  .sliderTrack {
+    gap: 20px; /* Increased from 15px */
+  }
+}
+
+@media (max-width: 400px) {
+  .slide {
+    width: 200px; /* Increased from 160px */
+  }
+  
+  .slideImage {
+    height: 280px; /* Further increased height */
+    padding: 5px; /* Minimal padding */
+  }
+  
+  .slideContent h3 {
+    font-size: 1.2rem; /* Increased from 1.1rem */
+  }
+  
+  .slideContent p {
+    font-size: 1rem; /* Increased from 0.9rem */
+  }
+}

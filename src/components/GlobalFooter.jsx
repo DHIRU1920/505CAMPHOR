@@ -55,7 +55,7 @@ const GlobalFooter = () => {
         {/* Address */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-300">Address</h3>
-          <p className="text-white">Shop No 1, 100 Futi Road,</p>
+          <p className="text-white">Shop No 1, 100 Feet Road,</p>
           <p className="text-white">Sangli Miraj Kupwad,</p>
           <p className="text-white">Maharashtra 416416</p>
         </div>
@@ -92,7 +92,7 @@ const GlobalFooter = () => {
             <FaInstagram />
           </a>
         </div>
-        <p className="text-white">© 2025 505Camphor. Developed by TrioXperts.</p>
+        <p className="text-white">505 Fine Camphor © 2025 All Rights Reserved. Website Design & Developed by TrioXperts.</p>
       </div>
     </footer>
   );

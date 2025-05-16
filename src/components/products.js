@@ -16,9 +16,9 @@ import Regular_dabbi_5_gm from "../assets/regular_dabbi_5_gm.png";
 const products = [
   {
     id: 1,
-    name: "Bhimseni Kapoor 100 Gm",
+    name: "Bhimseni Kapoor 100g",
     info: "Bhimseni Kapoor is a natural, 100% pure camphor used for rituals, Ayurveda, and air purification. Available in 100 gm, it helps in stress relief, decongestion, and repelling insects.",
-    weight: 100,
+    weight: "100g",
     category: "Bhimesemi",
     image: Bhimesemi_100gm,
     description:
@@ -33,9 +33,9 @@ const products = [
   },
   {
     id: 2,
-    name: "Bhimseni Kapoor 50 Gm",
+    name: "Bhimseni Kapoor 50g",
     info: "Bhimseni Kapoor, 50 gm, is a natural camphor used in rituals and aromatherapy. It purifies air, repels insects, and promotes relaxation with its 100% pure and chemical-free composition.",
-    weight: 50,
+    weight: "50g",
     category: "Bhimesemi",
     image: Bhimesemi_50gm,
     description:
@@ -50,9 +50,9 @@ const products = [
   },
   {
     id: 3,
-    name: "Regular Kapoor 100 Gm Pouch",
+    name: "Regular Kapoor 100g Pouch",
     info: "Regular Kapoor, 100 gm, is pure camphor used for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its non-toxic and chemical-free properties.",
-    weight: 100,
+    weight: "100g",
     category: "Regular",
     image: Regular_100_gm_pouch,
     description:
@@ -67,9 +67,9 @@ const products = [
   },
   {
     id: 4,
-    name: "Regular Kapoor 10 Gm",
+    name: "Regular Kapoor 10g",
     info: "Regular Kapoor, 10 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and enhances spiritual ambiance with its quick-evaporating and non-toxic properties.",
-    weight: 10,
+    weight: "10g",
     category: "Regular",
     image: Regular_10_gm,
     description:
@@ -86,7 +86,6 @@ const products = [
     id: 5,
     name: "Regular Kapoor 130 Tablets",
     info: "Regular Kapoor, 130 tablets, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its residue-free and chemical-free burning.",
-    weight: 130,
     category: "Regular",
     image: Regular_130_tablets,
     description:
@@ -101,9 +100,9 @@ const products = [
   },
   {
     id: 6,
-    name: "Regular Kapoor 200 Gm Pouch",
+    name: "Regular Kapoor 200g Pouch",
     info: "Regular Kapoor, 200 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and enhances spiritual ambiance with its quick-evaporating and non-toxic properties.",
-    weight: 200,
+    weight: "200g",
     category: "Regular",
     image: Regular_200_gm_and_250_gm_pouch,
     description:
@@ -118,9 +117,9 @@ const products = [
   },
   {
     id: 7,
-    name: "Regular Kapoor 20 Gm",
+    name: "Regular Kapoor 20g",
     info: "Regular Kapoor, 20 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and enhances spiritual ambiance with its quick-evaporating and non-toxic properties.",
-    weight: 20,
+    weight: "20g",
     category: "Regular",
     image: Regular_20_gm,
     description:
@@ -137,7 +136,6 @@ const products = [
     id: 8,
     name: "Regular Kapoor 20 Tablets",
     info: "Regular Kapoor, 20 tablets, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its residue-free and chemical-free burning.",
-    weight: 20,
     category: "Regular",
     image: Regular_20_tablets,
     description:
@@ -152,9 +150,9 @@ const products = [
   },
   {
     id: 9,
-    name: "Regular Kapoor 40 Gm",
+    name: "Regular Kapoor 40g",
     info: "Regular Kapoor, 40 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and enhances spiritual ambiance with its quick-evaporating and non-toxic properties.",
-    weight: 40,
+    weight: "40g",
     category: "Regular",
     image: Regular_40gm_and_50_gm,
     description:
@@ -169,9 +167,9 @@ const products = [
   },
   {
     id: 10,
-    name: "Regular Kapoor 5 Gm",
+    name: "Regular Kapoor 5g",
     info: "Regular Kapoor, 5 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its quick-evaporating and non-toxic properties.",
-    weight: 5,
+    weight: "5g",
     category: "Regular",
     image: Regular_5_gm,
     description:
@@ -188,7 +186,6 @@ const products = [
     id: 11,
     name: "Regular Kapoor 60 Tablets",
     info: "Regular Kapoor, 60 tablets, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its residue-free and chemical-free burning.",
-    weight: 60,
     category: "Regular",
     image: Regular_60_tablets,
     description:
@@ -205,7 +202,6 @@ const products = [
     id: 12,
     name: "Regular Kapoor 60 Tablets",
     info: "Regular Kapoor, 60 tablets, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its residue-free and chemical-free burning.",
-    weight: 60,
     category: "Regular",
     image: Regular_60_tablets_1,
     description:
@@ -220,9 +216,9 @@ const products = [
   },
   {
     id: 13,
-    name: "Regular Dabbi 15 Gm",
+    name: "Regular Dabbi 15g",
     info: "Regular Dabbi Kapoor, 15 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its residue-free and chemical-free burning.",
-    weight: 15,
+    weight: "15g",
     category: "Regular",
     image: Regular_dabbi_15_gm,
     description:
@@ -237,9 +233,9 @@ const products = [
   },
   {
     id: 14,
-    name: "Regular Dabbi Kapoor 5 Gm",
+    name: "Regular Dabbi Kapoor 5g",
     info: "Regular Dabbi Kapoor, 5 gm, is pure camphor for rituals and meditation. It purifies air, repels insects, and creates a calming ambiance with its quick-evaporating and non-toxic properties.",
-    weight: 5,
+    weight: "5g",
     category: "Regular",
     image: Regular_dabbi_5_gm,
     description:

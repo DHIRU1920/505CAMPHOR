@@ -115,9 +115,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-orange-100/80 to-orange-200/80 py-16 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-[#FEE7E6]/40  to-[#C85000]/40 py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#5a5552]">
+        <h2 className="text-[2.3rem] font-bold text-center mb-12 text-[#FF3C00]">
           WHAT OUR CLIENTS SAY 
         </h2>
         <div className="relative">

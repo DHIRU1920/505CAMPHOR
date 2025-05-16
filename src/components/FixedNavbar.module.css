@@ -27,10 +27,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo img:hover {
-  transform: scale(1.1) rotate(3deg);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 .navMenu {
   display: flex;
@@ -57,9 +53,7 @@
 }
 
 .navMenu a:hover {
-  color: #f86f03;
-  background-color: rgba(248, 111, 3, 0.15);
-  box-shadow: inset 0 0 10px rgba(248, 111, 3, 0.2);
+  color: #EC5800;
 }
 
 .navMenu a::after {
@@ -69,7 +63,7 @@
   height: 2px;
   bottom: 0;
   left: 50%;
-  background-color: #f86f03;
+  background-color: #EC5800;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
